@@ -1,6 +1,6 @@
-from pokerpack.deucesmaster.deuces.card import Card
-from pokerpack.deucesmaster.deuces.evaluator import Evaluator
-from pokerpack.deucesmaster.deuces.evaluator import Deck
+from deucesmaster.deuces.card import Card
+from deucesmaster.deuces.evaluator import Evaluator
+from deucesmaster.deuces.evaluator import Deck
 from random import choice
 
 '''
@@ -12,13 +12,11 @@ For testing you should update his packages to Python 3.
 # How to use the class:
 
 mc = MonteCarlo(times=10000)                                    # 'times' says how many times it should play
-equity = mc.preflop(card1='Ad', card2='Ah', total_villains=4)   # Calculates the equity off ace of diamond and ace of hearts when you play against 4 opponents.
+equity = mc.preflop(card1='Ad', card2='Ah', total_villains=4)   # Calculates the equity of ace of diamond and ace of hearts when you play against 4 opponents.
 
-print('Equity:', round(equity*100, 3), '%')                     # Prints out the quity in formatted form!
+print('Equity:', round(equity*100, 3), '%')                     # Prints out the equity in formatted form!
 
 # This Monte Carlo is really slow however I did it for fun :) !
-# If you know a better way or want to teach me something go ahead :) :D !!!!
-
 '''
 
 
