@@ -9,6 +9,16 @@ Download packages from: https://github.com/worldveil/deuces
 
 For testing you should update his packages to Python 3.
 
+# How to use the class:
+
+mc = MonteCarlo(times=10000)                                    # 'times' says how many times it should play
+equity = mc.preflop(card1='Ad', card2='Ah', total_villains=4)   # Calculates the equity off ace of diamond and ace of hearts when you play against 4 opponents.
+
+print('Equity:', round(equity*100, 3), '%')                     # Prints out the quity in formatted form!
+
+# This Monte Carlo is really slow however I did it for fun :) !
+# If you know a better way or want to teach me something go ahead :) :D !!!!
+
 '''
 
 
@@ -429,13 +439,3 @@ class MonteCarlo(object):
         return 1 - losecount/self.times
 
 
-'''
-Funktion der Klasse zum Testen:
-
-mc = MonteCarlo(times=10000)                                    # 'times' sagt der Klasse wie viel mal es die Situation durchspielen soll!
-equity = mc.preflop(card1='Ad', card2='Ah', total_villains=4)   # Berechnet die Equity für Karo Ass(Ad) und Herz Ass(Ah), wenn 4 Gegner im Spiel sind!
-
-print('Equity:', round(equity*100, 3), '%')                     # Schreibt die Equity in Prozent und rundet auf drei Nachkommstellen
-
-
-'''
